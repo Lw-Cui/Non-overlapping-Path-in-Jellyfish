@@ -5,14 +5,14 @@ non-overlapping path algorithm in Jellyfish Network.
 
 ## Path Diversity
 
-Jellyfish network with 246 12-port switches
+Jellyfish network with 246 switches
 (11 for peer switches and 1 for host).
 ![plot](./diversity.png)
 
 
 ## Throughput Comparision
 
-Jellyfish network with 50 9-port switches
+Jellyfish network with 50 switches
 (8 ports connecting peer switches and 1 for host). Links between switches are 10 Mbps.
 
 
