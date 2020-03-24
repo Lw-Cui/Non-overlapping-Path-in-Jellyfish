@@ -21,4 +21,7 @@ Jellyfish network with 50 switches
 | Non-overlapping |    25.35 Mbps (↑16.1%)| 34.58 Mbps(↑23.6%) |
 | K-Shortest-Paths   |  21.83 Mbps | 27.98 Mbps |
 
+*All Hosts are Activated: 25 hosts as server, 25 hosts as client*
+*Half Hosts are Activated: 12 hosts as server, 12 hosts as client*
+
 
