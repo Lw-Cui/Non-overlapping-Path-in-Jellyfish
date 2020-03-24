@@ -1,0 +1,31 @@
+RipL-POX (Ripcord-Lite for POX): A simple network controller for OpenFlow-based data centers
+
+== Install ==
+RipL, POX, and setuptools are the dependencies.
+
+This version has been tested with the dart branch of POX, commit 105a613, made on Fri Apr 18 16:00:55 2014 -0700.
+
+The invocation examples assume that POX available in ~/.
+
+# Add POX at tested version:
+cd ~/
+git clone git://github.com/noxrepo/pox
+cd pox
+git checkout 105a613
+
+# Build RipL:
+cd ~/
+sudo apt-get install -y python-setuptools
+git clone git://github.com/brandonheller/ripl.git
+cd ripl
+sudo python setup.py develop
+
+# Building Ripcord-POX
+cd ~/
+git clone git://github.com/brandonheller/riplpox.git
+cd riplpox
+sudo python setup.py develop
+
+== Running on POX ==
+
+See README
