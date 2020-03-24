@@ -24,7 +24,7 @@ def get_weight(networkx_graph, path):
     return cnt
 
 
-def compute_distinct_paths(networkx_graph, n):
+def compute_non_overlapping_paths(networkx_graph, n):
     paths = {}
     for a in range(n):
         paths[(str(a), str(a))] = [[str(a)]]
@@ -149,7 +149,7 @@ def assemble_histogram(path_counts, file_name):
     ax1.plot(x, ksp_distinct_paths_counts, color='b', label="8 Shortest Paths")
     ax1.plot(x, ecmp_64_distinct_paths_counts, color='r', label="64-way ECMP")
     ax1.plot(x, ecmp_8_distinct_paths_counts, color='g', label="8-way ECMP")
-    ax1.plot(x, distinct_paths_counts, color='y', label="Distinct paths")
+    ax1.plot(x, distinct_paths_counts, color='y', label="Non-overlapping Paths")
     plt.legend(loc="upper left");
     ax1.set_xlabel("Rank of Link")
     ax1.set_ylabel("# of Distinct Paths Link is on")
@@ -186,7 +186,7 @@ def main():
     n = 246
     numHosts = 3 * n
     d = 11
-    reuse_old_result = False
+    reuse_old_result = True
     ecmp_paths = {}
     all_ksp = {}
     file_name = "rrg_%s_%s" % (d, n)
@@ -201,19 +201,20 @@ def main():
         print "Computing K shortest paths"
         all_ksp = compute_k_shortest_paths(graph, n)
         save_obj(all_ksp, "ksp_%s" % (file_name))
-        distinct = compute_distinct_paths(graph, n)
-        save_obj(distinct, "unique_%s" % (file_name))
+        print "Computing non-overlapping paths"
+        non_overlapping = compute_non_overlapping_paths(graph, n)
+        save_obj(non_overlapping, "unique_%s" % (file_name))
     else:
         graph = networkx.read_adjlist(file_name)
 
         ecmp_paths = load_obj("ecmp_%s" % (file_name))
         all_ksp = load_obj("ksp_%s" % (file_name))
-        unique_ksp = load_obj("unique_%s" % (file_name))
+        non_overlapping = load_obj("unique_%s" % (file_name))
     print "Assembling counts from paths"
 
     derangement = random_derangement(numHosts)
     all_links = graph.edges()
-    path_counts = get_path_counts(distinct,ecmp_paths, all_ksp, derangement, all_links)
+    path_counts = get_path_counts(non_overlapping,ecmp_paths, all_ksp, derangement, all_links)
     print "Making the plot"
     assemble_histogram(path_counts=path_counts, file_name=file_name)
 
@@ -224,7 +225,7 @@ def main():
     print "Transforming ECMP 8"
     transformed_ecmp_routes = transform_paths_dpid("ecmp_%s" % (file_name), n, 8)
     save_routing_table(transformed_ecmp_routes, "ecmp_8_%s" % (file_name))
-    print "Transforming unique"
+    print "Transforming non-overlapping"
     transformed_ecmp_routes = transform_paths_dpid("unique_%s" % (file_name), n, 8)
     save_routing_table(transformed_ecmp_routes, "unique_%s" % (file_name))
 
