@@ -10,7 +10,7 @@ Jellyfish network with 246 switches
 ![plot](./diversity.png)
 
 
-## Average Throughput per Servers
+## Average Throughput per Server
 
 Jellyfish network with 50 switches
 (8 ports connecting peer switches and 1 for host). Links between switches are 10 Mbps.
