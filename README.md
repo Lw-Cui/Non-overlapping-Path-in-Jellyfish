@@ -1,7 +1,13 @@
 # Non-overlapping Path Algorithm 
 
-This repository implements and tests
-non-overlapping path algorithm in Jellyfish Network.
+## Motivation
+The high capacity mentioned in the [Jellyfish paper](https://www.usenix.org/system/files/conference/nsdi12/nsdi12-final82.pdf) inspires us to explore its potential to tackle burst flow. We want to maximize the average throughput at the expense of tolerable latency.
+
+## Progress
+
+We put forward and implemented a new routing algorithm named **Non-overlapping Path**, which guarantees all links on paths from A to B have no overlapping.
+
+This repository implements and tests non-overlapping path algorithm in Jellyfish Network.
 
 ## Path Diversity
 
@@ -21,4 +27,7 @@ Jellyfish network with 50 switches
 | K-Shortest-Paths   |  21.83 Mbps | 27.98 Mbps |
 
 
+## Acknowledge
+
+We leveraged several libraries ([Mininet](https://github.com/mininet/mininet), [Pox](https://github.com/noxrepo/pox), [RipL](https://github.com/brandonheller/ripl), [RipL-POX](https://github.com/brandonheller/riplpox)) and some [open-source code](https://github.com/lechengfan/cs244-assignment2) to reproduce the Jellyfish network and k-shortest-paths routing. Thanks for their contribution!
 
