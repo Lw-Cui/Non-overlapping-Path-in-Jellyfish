@@ -11,8 +11,7 @@ This repository implements and tests non-overlapping path algorithm in Jellyfish
 
 ## Path Diversity
 
-Jellyfish network with 246 switches
-(11 for peer switches and 1 for host).
+Jellyfish network with 246 switches (11 for peer switches and 1 for host). Based on Jellyfish Paper Figure 9.
 ![plot](./diversity.png)
 
 
