@@ -1,11 +1,11 @@
-# Non-overlapping Path Algorithm 
+# k-non-overlapping Path Algorithm 
 
 ## Motivation
 The high capacity mentioned in the [Jellyfish paper](https://www.usenix.org/system/files/conference/nsdi12/nsdi12-final82.pdf) inspires us to explore its potential to tackle burst flow. We want to maximize the average throughput at the expense of tolerable latency.
 
 ## Progress
 
-We put forward and implemented a new routing algorithm named **Non-overlapping Path**, which guarantees all links on paths from A to B have no overlapping.
+We put forward and implemented a new routing algorithm named **k-non-overlapping Path**, which guarantees all links on paths from A to B have no overlapping.
 
 This repository implements and tests non-overlapping path algorithm in Jellyfish Network.
 
