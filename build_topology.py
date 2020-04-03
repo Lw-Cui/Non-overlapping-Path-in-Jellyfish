@@ -183,10 +183,10 @@ def random_derangement(n):
 
 
 def main():
-    n = 246
+    n = 50
     numHosts = 3 * n
-    d = 11
-    reuse_old_result = True
+    d = 3
+    reuse_old_result = False
     ecmp_paths = {}
     all_ksp = {}
     file_name = "rrg_%s_%s" % (d, n)
