@@ -1,7 +1,7 @@
 # k-non-overlapping Path Algorithm 
 
 ## Motivation
-The high capacity mentioned in the [Jellyfish paper](https://www.usenix.org/system/files/conference/nsdi12/nsdi12-final82.pdf) inspires us to explore its potential to tackle burst flow. I want to maximize the average throughput at the expense of tolerable latency.
+The high capacity mentioned in the [Jellyfish paper](https://www.usenix.org/system/files/conference/nsdi12/nsdi12-final82.pdf) inspires me to explore its potential to tackle burst flow. I want to maximize the average throughput at the expense of tolerable latency.
 
 [slides](https://docs.google.com/presentation/d/1iPXMhChZSoxUF0wdVdqB6OcjMytnGAiv8M9-n3hED6o/edit?usp=sharing)
 
