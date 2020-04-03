@@ -26,7 +26,7 @@ The result is subject to lots of factors and may differ in another machine and/o
 
 |      Routing Algorithm  | 25 Servers / 25 Clients | 20 Servers / 20 Clients | 
 | ------------- |:-------------:|:-------------:|
-| 8-Non-overlapping |    25.35 Mbps (↑16.1%)| 29.75 Mbps(↑19.1%) |
+| 8-Non-overlapping |    25.35 Mbps (↑16.1%)| 29.75 Mbps (↑19.1%) |
 | 8-Shortest-Paths   |  21.83 Mbps | 24.98 Mbps | 
 
 
