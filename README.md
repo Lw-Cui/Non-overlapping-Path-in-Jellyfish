@@ -22,13 +22,14 @@ Jellyfish network with 246 switches (11 for peer switches and 1 for host). Based
 Jellyfish network with 50 switches
 (8 ports connecting peer switches and 1 for host). Links between switches are 10 Mbps.
 
+The result is subject to lots of factors and may differ in another machine and/or randomness.
+
 |      Routing Algorithm  | 25 Servers / 25 Clients | 20 Servers / 20 Clients | 
 | ------------- |:-------------:|:-------------:|
 | 8-Non-overlapping |    25.35 Mbps (↑16.1%)| 29.75 Mbps(↑19.1%) |
 | 8-Shortest-Paths   |  21.83 Mbps | 24.98 Mbps | 
 
 
-The result is subject to lots of factors and may differ in another machine and/or randomness.
 
 ## Build
 
