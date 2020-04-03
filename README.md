@@ -22,10 +22,13 @@ Jellyfish network with 246 switches (11 for peer switches and 1 for host). Based
 Jellyfish network with 50 switches
 (8 ports connecting peer switches and 1 for host). Links between switches are 10 Mbps.
 
-|      Routing Algorithm  | 25 Servers / 25 Clients | 12 Servers / 12 Clients |
+|      Routing Algorithm  | 25 Servers / 25 Clients | 20 Servers / 20 Clients | 
 | ------------- |:-------------:|:-------------:|
-| 8-Non-overlapping |    25.35 Mbps (↑16.1%)| 34.58 Mbps(↑23.6%) |
-| 8-Shortest-Paths   |  21.83 Mbps | 27.98 Mbps |
+| 8-Non-overlapping |    25.35 Mbps (↑16.1%)| 29.75 Mbps(↑19.1%) |
+| 8-Shortest-Paths   |  21.83 Mbps | 24.98 Mbps | 
+
+
+The result is subject to lots of factors and may differ in another machine and/or randomness.
 
 ## Build
 
@@ -63,7 +66,7 @@ To generate topology and test script, run
 ```
 python build_topology.py && python tcp_test.py > test.sh
 ```
-The default settings is 50 switches (8 ports connecting peer switches and 1 for host); 12 senders and 12 receivers.
+The default settings is 50 switches (8 ports connecting peer switches and 1 for host); 20 senders and 20 receivers.
 
 ### Run Test
 
@@ -75,6 +78,49 @@ Then in a new shell, run
 ```
 sudo mn --custom ripl/ripl/mn.py --topo jelly,50,8,rrg_8_50 --link tc --controller=remote --mac
 ```
+
+Wait until `result/output.txt` exists (about half minute), then run
+```
+python data_process.py results/output.txt
+```
+Result is like this:
+
+```
+[SUM]  0.0-10.7 sec  41.9 MBytes  32.7 Mbits/sec
+[SUM]  0.0-11.3 sec  57.6 MBytes  42.9 Mbits/sec
+[SUM]  0.0-11.0 sec  47.4 MBytes  36.0 Mbits/sec
+[SUM]  0.0-11.2 sec  39.8 MBytes  29.8 Mbits/sec
+[SUM]  0.0-11.3 sec  40.9 MBytes  30.3 Mbits/sec
+[SUM]  0.0-11.9 sec  36.0 MBytes  25.4 Mbits/sec
+[SUM]  0.0-11.3 sec  46.5 MBytes  34.4 Mbits/sec
+[SUM]  0.0-11.1 sec  27.4 MBytes  20.6 Mbits/sec
+[SUM]  0.0-11.3 sec  29.0 MBytes  21.5 Mbits/sec
+[SUM]  0.0-12.4 sec  41.0 MBytes  27.6 Mbits/sec
+[SUM]  0.0-11.3 sec  55.1 MBytes  40.8 Mbits/sec
+[SUM]  0.0-11.8 sec  37.1 MBytes  26.5 Mbits/sec
+[SUM]  0.0-11.4 sec  34.5 MBytes  25.4 Mbits/sec
+[SUM]  0.0-11.2 sec  24.6 MBytes  18.4 Mbits/sec
+[SUM]  0.0-11.5 sec  28.9 MBytes  21.1 Mbits/sec
+[SUM]  0.0-11.0 sec  38.8 MBytes  29.5 Mbits/sec
+[SUM]  0.0-11.0 sec  60.9 MBytes  46.4 Mbits/sec
+[SUM]  0.0-11.1 sec  23.1 MBytes  17.4 Mbits/sec
+[SUM]  0.0-11.3 sec  54.5 MBytes  40.6 Mbits/sec
+[SUM]  0.0-10.6 sec  57.0 MBytes  45.1 Mbits/sec
+
+30.62
+```
+
+Then the average throughput per server is 30.62 Mbps.
+
+### Comparsion with ksp
+
+**Stop** pox & mininet and **delete** `result/output.txt` first; old routing table in switches may influence result.
+
+This time start controller, change `unique_rrg_8_50` to `ksp_rrg_8_50`:
+```
+pox/pox.py riplpox.riplpox --topo=jelly,50,8,rrg_8_50 --routing=jelly,ksp_rrg_8_50 --mode=reactive
+```
+and do things again.
 
 ## Acknowledge
 
