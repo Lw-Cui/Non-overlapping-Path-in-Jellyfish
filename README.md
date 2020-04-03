@@ -27,6 +27,9 @@ Jellyfish network with 50 switches
 | 8-Non-overlapping |    25.35 Mbps (↑16.1%)| 34.58 Mbps(↑23.6%) |
 | 8-Shortest-Paths   |  21.83 Mbps | 27.98 Mbps |
 
+
+The result is subject to lots of factors and may differ in different machine.
+
 ## Build
 
 ### Creating Environment
