@@ -76,6 +76,40 @@ Then in a new shell, run
 sudo mn --custom ripl/ripl/mn.py --topo jelly,50,8,rrg_8_50 --link tc --controller=remote --mac
 ```
 
+Wait until `result/output.txt` exists (about half minute), then run
+```
+python data_process.py results/output.txt
+```
+Result is like this:
+
+```
+[SUM]  0.0-10.6 sec  42.9 MBytes  33.9 Mbits/sec
+[SUM]  0.0-11.2 sec  47.8 MBytes  35.9 Mbits/sec
+[SUM]  0.0-10.7 sec  48.0 MBytes  37.6 Mbits/sec
+[SUM]  0.0-11.5 sec  57.0 MBytes  41.6 Mbits/sec
+[SUM]  0.0-10.7 sec  36.0 MBytes  28.1 Mbits/sec
+[SUM]  0.0-10.7 sec  46.2 MBytes  36.3 Mbits/sec
+[SUM]  0.0-11.6 sec  48.6 MBytes  35.1 Mbits/sec
+[SUM]  0.0-11.3 sec  41.9 MBytes  31.1 Mbits/sec
+[SUM]  0.0-11.3 sec  26.9 MBytes  20.0 Mbits/sec
+[SUM]  0.0-10.9 sec  32.4 MBytes  24.9 Mbits/sec
+[SUM]  0.0-10.6 sec  52.0 MBytes  41.0 Mbits/sec
+[SUM]  0.0-10.9 sec  43.2 MBytes  33.4 Mbits/sec
+33.2416666667
+```
+
+Then the average throughput per server is 33.24 Mbps.
+
+### Comparsion with ksp
+
+**Stop** pox & mininet and **delete** `result/output.txt` first; old routing table in switches may influence result.
+
+This time start controller, change `unique_rrg_8_50` to `ksp_rrg_8_50`:
+```
+pox/pox.py riplpox.riplpox --topo=jelly,50,8,rrg_8_50 --routing=jelly,ksp_rrg_8_50 --mode=reactive
+```
+and do things again.
+
 ## Acknowledge
 
 We leveraged several libraries ([Mininet](https://github.com/mininet/mininet), [Pox](https://github.com/noxrepo/pox), [RipL](https://github.com/brandonheller/ripl), [RipL-POX](https://github.com/brandonheller/riplpox)) and some [open-source code](https://github.com/lechengfan/cs244-assignment2) to reproduce the Jellyfish network and k-shortest-paths routing. Thanks for their contribution!
