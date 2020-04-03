@@ -149,7 +149,7 @@ def assemble_histogram(path_counts, file_name):
     ax1.plot(x, ksp_distinct_paths_counts, color='b', label="8 Shortest Paths")
     ax1.plot(x, ecmp_64_distinct_paths_counts, color='r', label="64-way ECMP")
     ax1.plot(x, ecmp_8_distinct_paths_counts, color='g', label="8-way ECMP")
-    ax1.plot(x, distinct_paths_counts, color='y', label="Non-overlapping Paths")
+    ax1.plot(x, distinct_paths_counts, color='y', label="8-non-overlapping Paths")
     plt.legend(loc="upper left");
     ax1.set_xlabel("Rank of Link")
     ax1.set_ylabel("# of Distinct Paths Link is on")
