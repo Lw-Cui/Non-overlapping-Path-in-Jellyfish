@@ -55,14 +55,26 @@ Then run
 ```
 sudo git fetch origin master
 sudo git reset --hard origin/master
+sudo bash setup.sh
 ```
-to assure you get the lastest code.
+to assure you get and install the lastest code.
 
+To generate topology and test script, run 
 ```
-python build_topology.py
+python build_topology.py && python tcp_test.py > test.sh
 ```
-The default settings is 50 switches (8 ports connecting peer switches and 1 for host). 
+The default settings is 50 switches (8 ports connecting peer switches and 1 for host); 12 senders and 12 receivers.
 
+### Run Test
+
+Start controller first:
+```
+pox/pox.py riplpox.riplpox --topo=jelly,50,8,rrg_8_50 --routing=jelly,unique_rrg_8_50 --mode=reactive
+```
+Then in a new shell, run
+```
+sudo mn --custom ripl/ripl/mn.py --topo jelly,50,8,rrg_8_50 --link tc --controller=remote --mac
+```
 
 ## Acknowledge
 
