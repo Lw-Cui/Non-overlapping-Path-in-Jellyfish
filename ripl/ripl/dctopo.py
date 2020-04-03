@@ -303,7 +303,7 @@ class JellyfishTopo(StructuredTopo):
             host_opts = self.def_nopts(self.LAYER_HOST, host_id)
             hosts.append(self.addHost(host_id, **host_opts))
 
-            self.addLink(host_id, switch_id, bw=10)
+            self.addLink(host_id, switch_id, bw=100)
 
         # Read in the network topology (connections between switches)
         with open(adjlist_file) as f:
