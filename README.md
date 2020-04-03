@@ -11,13 +11,13 @@ We put forward and implemented a new routing algorithm named **k-non-overlapping
 
 This repository implements and tests non-overlapping path algorithm in Jellyfish Network.
 
-## Path Diversity
+### Path Diversity
 
 Jellyfish network with 246 switches (11 for peer switches and 1 for host). Based on Jellyfish Paper Figure 9.
 ![plot](./diversity.png)
 
 
-## Average Throughput per Server
+### Average Throughput per Server
 
 Jellyfish network with 50 switches
 (8 ports connecting peer switches and 1 for host). Links between switches are 10 Mbps.
@@ -51,6 +51,17 @@ ssh mininet@[Your VM IP]
 ```
 the password is also `mininet`.
 
+Then run
+```
+sudo git fetch origin master
+sudo git reset --hard origin/master
+```
+to assure you get the lastest code.
+
+```
+python build_topology.py
+```
+The default settings is 50 switches (8 ports connecting peer switches and 1 for host). 
 
 
 ## Acknowledge
