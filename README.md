@@ -28,7 +28,7 @@ Jellyfish network with 50 switches
 | 8-Shortest-Paths   |  21.83 Mbps | 27.98 Mbps |
 
 
-The result is subject to lots of factors and may differ in different machine.
+The result is subject to lots of factors and may differ in another machine and/or randomness.
 
 ## Build
 
