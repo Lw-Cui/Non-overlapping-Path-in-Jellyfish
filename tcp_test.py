@@ -16,7 +16,7 @@ def main():
 	servers = randomHosts[1::2]
 	pairs_list = zip(clients, servers)
 	
-	for pair in pairs_list[:12]:
+	for pair in pairs_list[:20]:
 		print pair[1] + " iperf -s &"
 		print pair[0] + " iperf -c %s -P 8 >> results/output.txt &" %(pair[1])
 	
