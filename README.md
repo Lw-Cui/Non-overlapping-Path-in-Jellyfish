@@ -114,7 +114,7 @@ Then the average throughput per server is 30.62 Mbps.
 
 ### Comparsion with ksp
 
-**Stop** pox & mininet and **delete** `result/output.txt` first; old routing table in switches may influence result.
+**Stop** pox & mininet and **delete** `result/output.txt` first; old routing table in switches, states in controller may influence result.
 
 This time start controller, change `unique_rrg_8_50` to `ksp_rrg_8_50`:
 ```
