@@ -1,13 +1,13 @@
 # k-non-overlapping Path Algorithm 
 
 ## Motivation
-The high capacity mentioned in the [Jellyfish paper](https://www.usenix.org/system/files/conference/nsdi12/nsdi12-final82.pdf) inspires us to explore its potential to tackle burst flow. We want to maximize the average throughput at the expense of tolerable latency.
+The high capacity mentioned in the [Jellyfish paper](https://www.usenix.org/system/files/conference/nsdi12/nsdi12-final82.pdf) inspires us to explore its potential to tackle burst flow. I want to maximize the average throughput at the expense of tolerable latency.
 
 [slides](https://docs.google.com/presentation/d/1iPXMhChZSoxUF0wdVdqB6OcjMytnGAiv8M9-n3hED6o/edit?usp=sharing)
 
 ## Progress
 
-We put forward and implemented a new routing algorithm named **k-non-overlapping Path**, which guarantees all links on paths from A to B have no overlapping.
+I put forward and implemented a new routing algorithm named **k-non-overlapping Path**, which guarantees all links on paths from A to B have no overlapping.
 
 This repository implements and tests non-overlapping path algorithm in Jellyfish Network.
 
@@ -35,7 +35,7 @@ The result is subject to lots of factors and may differ in another machine and/o
 
 ### Creating Environment
 
-The most recommended way to reproduce it is using [google computer engine](https://cloud.google.com/compute); we provided a public image for the whole test environment. Simply run in [google cloud shell](https://cloud.google.com/shell):
+The most recommended way to reproduce it is using [google computer engine](https://cloud.google.com/compute); I provided a public image for the whole test environment. Simply run in [google cloud shell](https://cloud.google.com/shell):
 
 ```
 gcloud compute instances create [VM Name] --image non-overlapping --image-project winter-cargo-272015
@@ -125,5 +125,5 @@ and do things again.
 
 ## Acknowledge
 
-We leveraged several libraries ([Mininet](https://github.com/mininet/mininet), [Pox](https://github.com/noxrepo/pox), [RipL](https://github.com/brandonheller/ripl), [RipL-POX](https://github.com/brandonheller/riplpox)) and some [open-source code](https://github.com/lechengfan/cs244-assignment2) to reproduce the Jellyfish network and k-shortest-paths routing. Thanks for their contribution!
+I leveraged several libraries ([Mininet](https://github.com/mininet/mininet), [Pox](https://github.com/noxrepo/pox), [RipL](https://github.com/brandonheller/ripl), [RipL-POX](https://github.com/brandonheller/riplpox)) and some [open-source code](https://github.com/lechengfan/cs244-assignment2) to reproduce the Jellyfish network and k-shortest-paths routing. Thanks for their contribution!
 
