@@ -59,6 +59,7 @@ the password is also `mininet`.
 
 Then run
 ```
+cd jellyfish
 sudo git fetch origin master
 sudo git reset --hard origin/master
 sudo bash setup.sh
