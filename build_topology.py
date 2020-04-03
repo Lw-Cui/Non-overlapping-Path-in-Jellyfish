@@ -185,7 +185,7 @@ def random_derangement(n):
 def main():
     n = 50
     numHosts = 3 * n
-    d = 3
+    d = 8
     reuse_old_result = False
     ecmp_paths = {}
     all_ksp = {}

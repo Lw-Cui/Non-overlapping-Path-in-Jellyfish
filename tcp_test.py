@@ -4,9 +4,9 @@ from time import sleep, time
 from ripl.ripl.dctopo import JellyfishTopo
 
 def main():
-	nSwitches = 10
-	nPorts = 3
-	adjlist_file = "rrg_3_10"
+	nSwitches = 50
+	nPorts = 8
+	adjlist_file = "rrg_8_50"
 
 	
 	jelly_topo = JellyfishTopo(nSwitches, nPorts, adjlist_file)
@@ -16,9 +16,9 @@ def main():
 	servers = randomHosts[1::2]
 	pairs_list = zip(clients, servers)
 	
-	for pair in pairs_list:
+	for pair in pairs_list[:24]:
 		print pair[1] + " iperf -s &"
-		print pair[0] + " iperf -c %s -P 8 -t 60 >> results/ecmp_8_eight_output.txt &" %(pair[1])
+		print pair[0] + " iperf -c %s -P 8 >> results/ecmp_8_eight_output.txt &" %(pair[1])
 	
 if __name__ == '__main__':
 	main()
