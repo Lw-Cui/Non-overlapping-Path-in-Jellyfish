@@ -81,6 +81,11 @@ Then in a new shell, run
 ```
 sudo mn --custom ripl/ripl/mn.py --topo jelly,50,8,rrg_8_50 --link tc --controller=remote --mac
 ```
+run command 
+```
+source test.sh
+```
+in mininet prompt.
 
 Wait until `result/output.txt` exists (about half minute), then run
 ```
