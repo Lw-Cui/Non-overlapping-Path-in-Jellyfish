@@ -34,6 +34,8 @@ The result is subject to lots of factors and may differ in another machine and/o
 | 8-Shortest-Paths   |  21.83 Mbps | 24.98 Mbps | 
 
 
+![plot](./comparsion.png)
+
 
 ## Build
 
