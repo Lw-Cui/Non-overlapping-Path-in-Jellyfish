@@ -14,7 +14,10 @@ This repository implements and tests non-overlapping path algorithm in Jellyfish
 
 ### Path Diversity
 
-Jellyfish network with 246 switches (11 for peer switches and 1 for host). Based on Jellyfish Paper Figure 9.
+Jellyfish network with 50 switches (8 for peer switches and 1 for host). Based on Jellyfish Paper Figure 9.
+
+Check this to [this](./RunInVM.pdf) to know how to run [Jupyter Note](./build_topology.ipynb) in Google cloud to reproduce it.  **python 3** is needed.
+
 ![plot](./diversity.png)
 
 
