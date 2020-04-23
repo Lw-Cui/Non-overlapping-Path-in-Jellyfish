@@ -70,7 +70,7 @@ sudo git fetch origin master
 sudo git reset --hard origin/master
 sudo bash setup.sh
 ```
-to assure you get and install the lastest code.
+to assure you get and install the lastest code. Each time you change [`JellyfishRouting`](https://github.com/Lw-Cui/Non-overlapping-Path-in-Jellyfish/blob/master/ripl/ripl/routing.py#L49) or [`JellyfishTopo`](https://github.com/Lw-Cui/Non-overlapping-Path-in-Jellyfish/blob/master/ripl/ripl/dctopo.py#L221), you have to rerun `sudo bash setup.sh`.
 
 To generate topology and test script, run 
 ```
