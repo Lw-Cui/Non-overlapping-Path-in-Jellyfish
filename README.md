@@ -37,6 +37,8 @@ The result is subject to lots of factors and may differ in another machine and/o
 
 ## Build
 
+**Python 2** is used for below instruction.
+
 ### Creating Environment
 
 The most recommended way to reproduce it is using [google computer engine](https://cloud.google.com/compute); We provided a public image for the whole test environment. Simply run in [google cloud shell](https://cloud.google.com/shell):
