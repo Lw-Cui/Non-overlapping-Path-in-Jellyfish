@@ -28,10 +28,10 @@ Jellyfish network with 50 switches
 
 The result is subject to lots of factors and may differ in another machine and/or randomness.
 
-|      Routing Algorithm  | 25 Servers / 25 Clients | 20 Servers / 20 Clients | 
-| ------------- |:-------------:|:-------------:|
-| 8-Non-overlapping |    25.35 Mbps (↑16.1%)| 29.75 Mbps (↑19.1%) |
-| 8-Shortest-Paths   |  21.83 Mbps | 24.98 Mbps | 
+| Routing Algorithm | 10 Servers / 10 Clients | 15 Servers / 15 Clients | 20 Servers / 20 Clients | 25 Servers / 25 Clients |
+| ----------------- | ----------------------- | ----------------------- | :---------------------: | :---------------------: |
+| 8-Non-overlapping | 38.68  Mbps (↑13.2%)    | 32.7  Mbps (↑8.6%)      |   29.75 Mbps (↑19.1%)   |   25.35 Mbps (↑16.0%)   |
+| 8-Shortest-Paths  | 34.19  Mbps             | 30.1  Mbps              |       24.98 Mbps        |       21.83 Mbps        |
 
 
 ![plot](./comparsion.png)
