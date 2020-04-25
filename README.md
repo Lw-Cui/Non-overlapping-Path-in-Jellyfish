@@ -14,7 +14,10 @@ This repository implements and tests non-overlapping path algorithm in Jellyfish
 
 ### Path Diversity
 
-Jellyfish network with 246 switches (11 for peer switches and 1 for host). Based on Jellyfish Paper Figure 9.
+Jellyfish network with 50 switches (8 for peer switches and 1 for host). Based on Jellyfish Paper Figure 9.
+
+Check this to [this](./RunInVM.pdf) to know how to run [our Jupyter Note](./build_topology.ipynb) in Google cloud to reproduce it.  **python 3** is needed.
+
 ![plot](./diversity.png)
 
 
@@ -25,14 +28,18 @@ Jellyfish network with 50 switches
 
 The result is subject to lots of factors and may differ in another machine and/or randomness.
 
-|      Routing Algorithm  | 25 Servers / 25 Clients | 20 Servers / 20 Clients | 
-| ------------- |:-------------:|:-------------:|
-| 8-Non-overlapping |    25.35 Mbps (↑16.1%)| 29.75 Mbps (↑19.1%) |
-| 8-Shortest-Paths   |  21.83 Mbps | 24.98 Mbps | 
+| Routing Algorithm | 10 Servers / 10 Clients | 15 Servers / 15 Clients | 20 Servers / 20 Clients | 25 Servers / 25 Clients |
+| ----------------- | ----------------------- | ----------------------- | :---------------------: | :---------------------: |
+| 8-Non-overlapping | 38.68  Mbps (↑13.2%)    | 32.7  Mbps (↑8.6%)      |   29.75 Mbps (↑19.1%)   |   25.35 Mbps (↑16.0%)   |
+| 8-Shortest-Paths  | 34.19  Mbps             | 30.1  Mbps              |       24.98 Mbps        |       21.83 Mbps        |
 
+
+![plot](./comparsion.png)
 
 
 ## Build
+
+**Python 2** is used for below instruction.
 
 ### Creating Environment
 
@@ -63,7 +70,7 @@ sudo git fetch origin master
 sudo git reset --hard origin/master
 sudo bash setup.sh
 ```
-to assure you get and install the lastest code.
+to assure you get and install the lastest code. Each time you change [`JellyfishRouting`](https://github.com/Lw-Cui/Non-overlapping-Path-in-Jellyfish/blob/master/ripl/ripl/routing.py#L49) or [`JellyfishTopo`](https://github.com/Lw-Cui/Non-overlapping-Path-in-Jellyfish/blob/master/ripl/ripl/dctopo.py#L221), you have to rerun `sudo bash setup.sh`.
 
 To generate topology and test script, run 
 ```
