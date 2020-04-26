@@ -139,9 +139,11 @@ pox/pox.py riplpox.riplpox --topo=jelly,50,8,rrg_8_50 --routing=jelly,ksp_rrg_8_
 and do things again.
 
 ## Contribution
-* Liwei Cui: Reproduced Jellyfish network; implemented and benchmarked routing algorithms; Set up the experimental environment on the Google Cloud Platform
-* Mou Zhang: Set up the experimental environment on the Google Cloud Platform
-* Yifeng Yin: Surveyed similar algorithms
+
+* Liwei Cui: Reproduced Jellyfish network; Implemented and benchmarked routing algorithms; Analyzed and visualized data
+* Mou Zhang: Performed experiments under various circumstances; Migrated the environment to the Cloud
+* Yifeng Yin: Provided mathematics analysis
+
 
 ## Acknowledge
 
