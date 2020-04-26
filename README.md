@@ -153,8 +153,6 @@ and do things again.
 * [RipL-POX](https://github.com/brandonheller/riplpox) library for controller built on RipL
 * Austin Poore and Tommy Fan’s [open-source code](https://github.com/lechengfan/cs244-assignment2) for inspiration to reproduce Jellyfish and k-shortest-paths routing
 
-Thanks for their contribution!
-
 ## Reference
 * Singla A, Hong C, Popa L, Godfrey PB. Jellyfish: Networking data centers randomly. *2012:225-238.*
 * Singh A, Ong J, Agarwal A, et al. Jupiter rising: A decade of Clos topologies and centralized control in google's datacenter network. *ACM SIGCOMM computer communication review​. 2015;45(4):183-197.*
