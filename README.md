@@ -147,7 +147,13 @@ and do things again.
 
 ## Acknowledge
 
-We leveraged several libraries ([Mininet](https://github.com/mininet/mininet), [Pox](https://github.com/noxrepo/pox), [RipL](https://github.com/brandonheller/ripl), [RipL-POX](https://github.com/brandonheller/riplpox)) and some [open-source code](https://github.com/lechengfan/cs244-assignment2) to reproduce the Jellyfish network and k-shortest-paths routing. Thanks for their contribution!
+* [Mininet](https://github.com/mininet/mininet) library for network emulation
+* [Pox](https://github.com/noxrepo/pox) library for OpenFlow controller
+* [RipL](https://github.com/brandonheller/ripl) library for simplifying data center code
+* [RipL-POX](https://github.com/brandonheller/riplpox) library for controller built on RipL
+Austin Poore and Tommy Fan’s [open-source code](https://github.com/lechengfan/cs244-assignment2) for inspiration to reproduce Jellyfish and k-shortest-paths routing
+
+Thanks for their contribution!
 
 ## Reference
 * Singla A, Hong C, Popa L, Godfrey PB. Jellyfish: Networking data centers randomly. *2012:225-238.*
