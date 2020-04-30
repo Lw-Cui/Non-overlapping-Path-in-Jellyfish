@@ -128,10 +128,11 @@ Result is like this:
 [SUM]  0.0-11.3 sec  54.5 MBytes  40.6 Mbits/sec
 [SUM]  0.0-10.6 sec  57.0 MBytes  45.1 Mbits/sec
 
-30.62
+[REPORT] The average throughput per server is 30.62 Mbits/sec
 ```
 
 Then the average throughput per server is 30.62 Mbps.
+Again, you can check [experiment_data.xlsx](./experiment_data.xlsx) for concrete data.
 
 ### Comparsion with ksp
 
