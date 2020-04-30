@@ -13,6 +13,8 @@ We put forward and implemented a new routing algorithm named **k-non-overlapping
 
 This repository implements and tests non-overlapping path algorithm in Jellyfish Network.
 
+![demo](pic/demo.jpg)
+
 ### Path Diversity
 
 Jellyfish network with 50 switches (8 for peer switches and 1 for host). Based on Jellyfish Paper Figure 9: Inter-switch link’s path count in ECMP, k-shortest-path and k-non-overlapping routing for random permutation traffic at the server-level on a Jellyfish of 50 servers. For each link, we count the number of distinct paths it is on. Each network cable is considered as two links, one for each direction.
@@ -76,7 +78,8 @@ to assure you get and install the lastest code. Each time you change [`Jellyfish
 
 To generate topology and test script, run 
 ```
-python build_topology.py && python tcp_test.py > test.sh
+python build_topology.py --node=50 --port=8
+python tcp_test.py --node=50 --port=8 --test=20 > test.sh
 ```
 The default settings is 50 switches (8 ports connecting peer switches and 1 for host); 20 senders and 20 receivers.
 

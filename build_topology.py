@@ -1,3 +1,4 @@
+import argparse
 import os
 import sys
 import networkx
@@ -183,9 +184,14 @@ def random_derangement(n):
 
 
 def main():
-    n = 50
+    parser = argparse.ArgumentParser(description='Generate topology')
+    parser.add_argument('-n','--node', nargs="?", type=int, default=50, help='number of switches')
+    parser.add_argument('-p','--port', nargs="?", type=int, default=8, help='number of ports for each switch')
+    args = parser.parse_args()
+
+    n = args.node
     numHosts = 3 * n
-    d = 8
+    d = args.port
     reuse_old_result = False
     ecmp_paths = {}
     all_ksp = {}
@@ -214,19 +220,19 @@ def main():
 
     derangement = random_derangement(numHosts)
     all_links = graph.edges()
-    path_counts = get_path_counts(non_overlapping,ecmp_paths, all_ksp, derangement, all_links)
+    path_counts = get_path_counts(non_overlapping, ecmp_paths, all_ksp, derangement, all_links)
     print "Making the plot"
     assemble_histogram(path_counts=path_counts, file_name=file_name)
 
     print "Transforming routes for Ripl/Riplpox use"
     print "Transforming KSP"
-    transformed_ksp_routes = transform_paths_dpid("ksp_%s" % (file_name), n, 8)
+    transformed_ksp_routes = transform_paths_dpid("ksp_%s" % (file_name), n, d)
     save_routing_table(transformed_ksp_routes, "ksp_%s" % (file_name))
     print "Transforming ECMP 8"
-    transformed_ecmp_routes = transform_paths_dpid("ecmp_%s" % (file_name), n, 8)
+    transformed_ecmp_routes = transform_paths_dpid("ecmp_%s" % (file_name), n, d)
     save_routing_table(transformed_ecmp_routes, "ecmp_8_%s" % (file_name))
     print "Transforming non-overlapping"
-    transformed_ecmp_routes = transform_paths_dpid("unique_%s" % (file_name), n, 8)
+    transformed_ecmp_routes = transform_paths_dpid("unique_%s" % (file_name), n, d)
     save_routing_table(transformed_ecmp_routes, "unique_%s" % (file_name))
 
 
