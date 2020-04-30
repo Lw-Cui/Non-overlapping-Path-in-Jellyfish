@@ -1,4 +1,5 @@
-# k-non-overlapping Path Algorithm 
+![title](./title.jpg)
+
 
 [slides](https://docs.google.com/presentation/d/1iPXMhChZSoxUF0wdVdqB6OcjMytnGAiv8M9-n3hED6o/edit?usp=sharing) and [video](https://www.dropbox.com/s/rq6bazvvpa3kb3w/Non-overlapping%20algorithm.mp4?dl=0)
 
