@@ -11,7 +11,7 @@ def main():
 	args = parser.parse_args()
 	nSwitches = args.node
 	nPorts = args.port
-	adjlist_file = "rrg_{}_{}".format(nSwitches, nPorts)
+	adjlist_file = "rrg_{}_{}".format(nPorts, nSwitches)
 
 
 	jelly_topo = JellyfishTopo(nSwitches, nPorts, adjlist_file)
