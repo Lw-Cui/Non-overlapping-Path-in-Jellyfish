@@ -1,4 +1,4 @@
-![title](./title.png)
+![title](pic/title.png)
 
 
 [slides](https://docs.google.com/presentation/d/1iPXMhChZSoxUF0wdVdqB6OcjMytnGAiv8M9-n3hED6o/edit?usp=sharing) and [video](https://www.dropbox.com/s/rq6bazvvpa3kb3w/Non-overlapping%20algorithm.mp4?dl=0)
@@ -19,7 +19,7 @@ Jellyfish network with 50 switches (8 for peer switches and 1 for host). Based o
 
 Check this to [this](./RunInVM.pdf) to know how to run [our Jupyter Note](./build_topology.ipynb) in Google cloud to reproduce it.  **python 3** is needed.
 
-![plot](./diversity.png)
+![plot](pic/diversity.png)
 
 
 ### Average Throughput per Server
@@ -35,7 +35,7 @@ The result is subject to lots of factors and may differ in another machine and/o
 | 8-Shortest-Paths  | 34.19  Mbps             | 30.1  Mbps              |       24.98 Mbps        |       21.83 Mbps        |
 
 
-![plot](./comparsion.png)
+![plot](pic/comparsion.png)
 
 You can check [experiment_data.xlsx](./experiment_data.xlsx) for concrete data.
 
@@ -80,6 +80,7 @@ python build_topology.py && python tcp_test.py > test.sh
 ```
 The default settings is 50 switches (8 ports connecting peer switches and 1 for host); 20 senders and 20 receivers.
 
+![](pic/experiment.png)
 ### Run Test
 
 Start controller first:
