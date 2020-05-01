@@ -19,7 +19,7 @@ This repository implements and tests non-overlapping path algorithm in Jellyfish
 
 Jellyfish network with 50 switches (8 for peer switches and 1 for host). Based on Jellyfish Paper Figure 9: Inter-switch link’s path count in ECMP, k-shortest-path and k-non-overlapping routing for random permutation traffic at the server-level on a Jellyfish of 50 servers. For each link, we count the number of distinct paths it is on. Each network cable is considered as two links, one for each direction.
 
-Check this to [this](./RunInVM.pdf) to know how to run [our Jupyter Note](./build_topology.ipynb) in Google cloud to reproduce it.  **python 3** is needed.
+Check [Google colab](https://colab.research.google.com/drive/1Gr3CdQoGaxquAKJgxV-6qfBktk2h_r7p?usp=sharing) to reproduce this plot!
 
 ![plot](pic/diversity.png)
 
@@ -43,7 +43,7 @@ You can check [experiment_data.xlsx](./experiment_data.xlsx) for concrete data.
 
 ## Build
 
-**Python 2** is used for below instruction.
+**Python 2** is used for below instruction -- all lib we use is only in Python 2.
 
 ### Creating Environment
 
