@@ -29,9 +29,8 @@ Check our [Google colab link](https://colab.research.google.com/drive/1Gr3CdQoGa
 Jellyfish network with 50 switches
 (8 ports connecting peer switches and 1 for host). Links between switches are 10 Mbps.
 
-The result is subject to lots of factors and may differ in another machine and/or randomness.
-
-See next section to reproduce all of them!
+The result is subject to lots of factors and may differ in another machine and/or randomness. 
+See next section to reproduce yourself!
 
 | Routing Algorithm | 10 Servers / 10 Clients | 15 Servers / 15 Clients | 20 Servers / 20 Clients | 25 Servers / 25 Clients |
 | ----------------- | ----------------------- | ----------------------- | :---------------------: | :---------------------: |
