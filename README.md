@@ -1,7 +1,7 @@
 ![title](pic/title.png)
 
 
-[slides](https://docs.google.com/presentation/d/1iPXMhChZSoxUF0wdVdqB6OcjMytnGAiv8M9-n3hED6o/edit?usp=sharing) and [video](https://www.dropbox.com/s/rq6bazvvpa3kb3w/Non-overlapping%20algorithm.mp4?dl=0)
+[slides](https://docs.google.com/presentation/d/1iPXMhChZSoxUF0wdVdqB6OcjMytnGAiv8M9-n3hED6o/edit?usp=sharing), [video](https://www.dropbox.com/s/5pyxaks8ntxaara/Non-overlapping%20algorithm.mp4?dl=0), and [final report](https://www.dropbox.com/s/rwqy49ubcqcq2e6/Cloud_Computing_Final_Report.pdf?dl=0)
 
 ## Motivation
 The high capacity mentioned in the [Jellyfish paper](https://www.usenix.org/system/files/conference/nsdi12/nsdi12-final82.pdf) inspires us to explore its potential to tackle burst flow. We want to maximize the average throughput at the expense of tolerable latency.
