@@ -40,7 +40,7 @@ See next section to reproduce yourself!
 
 ![plot](pic/comparsion.png)
 
-You can check [experiment_data.xlsx](./experiment_data.xlsx) for concrete data.
+You can check [experiment_data.xlsx](https://www.dropbox.com/s/jhjfznmf1srh9ne/experiment_data.xlsx?dl=0) for concrete data.
 
 ## Build
 
@@ -131,7 +131,7 @@ Result is like this:
 ```
 
 Then the average throughput per server is 30.62 Mbps.
-Again, you can check [experiment_data.xlsx](./experiment_data.xlsx) for concrete data.
+Again, you can check [experiment_data.xlsx](https://www.dropbox.com/s/jhjfznmf1srh9ne/experiment_data.xlsx?dl=0) for concrete data.
 
 ### Comparsion with ksp
 
